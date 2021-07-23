@@ -24,7 +24,7 @@ Citizen.CreateThread(function()
   while true do
     Citizen.Wait(4)
 
-    if IsControlJustReleased(0, 303) then
+    if IsControlJustReleased(0, Keys[Config.Key]) then
       TriggerScreenblurFadeIn(300)
 
       SetNuiFocus(true, true)
