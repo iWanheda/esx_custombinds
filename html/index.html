@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/tailwind.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <div id="main" style="display: none;" class="flex mt-40 justify-center">
+    <div class="w-max h-max space-y-6 p-10 bg-gray-600 rounded-md">
+      <div class="flex justify-between items-center space-x-64 w-max text-gray-400">
+        <span class="font-semibold">Custom Binding System</span>
+        <div>
+          <i id="close" class="fas fa-times duration-200 hover:text-gray-300 cursor-pointer"></i>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-6">
+        <div id="bind-list" class="overflow-y-auto max-h-96 flex flex-col justify-center px-6 space-y-6">
+          <div class="flex w-full items-center space-x-2">
+            <div class="bg-gray-500 rounded-md px-2 p-1 text-gray-300">
+              <span>1</span>
+            </div>
+            <div id="bkey-1"
+              class="hover:bg-gray-800 duration-200 bind-key cursor-pointer bg-gray-700 text-gray-400 flex justify-center w-32 px-2 p-1 rounded-md">
+              <span>KEY</span>
+            </div>
+            <input id="bcmd-1" type="text" id="bind-1" placeholder="Command"
+              class="bind-cmd w-full focus:outline-none rounded-md px-2 p-1 border bg-transparent border-gray-500 text-gray-400">
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <button id="add-bind" class="text-gray-400 rounded-md p-2 px-4 bg-gray-700 duration-200 hover:bg-gray-800">
+            <div class="space-x-2">
+              <i class="fas fa-plus-square"></i>
+              <span>Add Bind</span>
+            </div>
+          </button>
+        </div>
+        <div class="h-px w-full bg-gray-500"></div>
+        <div class="flex justify-center">
+          <button id="save-binds"
+            class="p-2 px-4 w-max duration-200 hover:bg-gray-800 rounded-md bg-gray-700 text-gray-400">
+            <div class="flex items-center">
+              <svg id="save-loading" style="display: none;" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                fill="none" viewBox="0 0 28 28">
+                <path class="opacity-75" fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                </path>
+              </svg>
+              <span>
+                Save & Exit
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
