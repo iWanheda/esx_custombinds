@@ -1,3 +1,7 @@
+if Config.Event then
+  TriggerEvent("esx:getSharedObject", function(lib) ESX = lib end)
+end
+
 ESX.RegisterServerCallback("__binds:internal:_save_binds", function(source, cb, args)
   local xPlayer = ESX.GetPlayerFromId(source)
 

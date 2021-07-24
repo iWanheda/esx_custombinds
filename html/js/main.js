@@ -167,6 +167,7 @@ $(document).ready(() => {
     setTimeout(() => {
       $.post("http://esx_custombinds/save", JSON.stringify({ bindsList: newBindList }))
       closeUi();
+      document.getElementById("audio").play();
       $("#save-loading").fadeOut(300);
     }, 800)
   })

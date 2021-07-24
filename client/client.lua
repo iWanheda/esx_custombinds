@@ -1,5 +1,13 @@
 local playerBinds = { }
 
+Citizen.CreateThread(function()
+  if Config.Event then
+    while ESX == nil do
+      TriggerEvent("esx:getSharedObject", function(lib) ESX = lib end)
+    end
+  end
+end)
+
 local Keys = {
   ["ESC"] = 322, ["F1"] = 288, ["F2"] = 289, ["F3"] = 170, ["F5"] = 166, ["F6"] = 167, ["F7"] = 168, ["F8"] = 169, ["F9"] = 56, ["F10"] = 57,
   ["~"] = 243, ["1"] = 157, ["2"] = 158, ["3"] = 160, ["4"] = 164, ["5"] = 165, ["6"] = 159, ["7"] = 161, ["8"] = 162, ["9"] = 163, ["-"] = 84, ["="] = 83, ["BACKSPACE"] = 177,
@@ -18,9 +26,12 @@ UpdateBinds = function()
   end, {})
 end
 
-Citizen.CreateThread(function()
+RegisterNetEvent('esx:playerLoaded')
+AddEventHandler('esx:playerLoaded', function(playerData)
   UpdateBinds()
+end)
 
+Citizen.CreateThread(function()
   while true do
     Citizen.Wait(4)
 

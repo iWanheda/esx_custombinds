@@ -10,6 +10,7 @@ files {
   'html/*.html',
   'html/js/*.js',
   'html/css/*.css',
+  'html/resources/*.ogg'
 }
 
 shared_scripts { '@es_extended/locale.lua', 'config.lua', '@es_extended/imports.lua' }
